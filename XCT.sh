@@ -17,9 +17,9 @@ echo -e "Enter Your Option \c "
 read answer
 case "$answer" in 
 1) sudo update-grub ;;
-2) sudo apt-get -y update ;;
+2) sudo apt-get update && sudo apt upgrade -y ;;
 3) sudo apt --fix-missing update
-   sudo apt-get clean ;;
+   sudo apt-get autoremove ;;
 4) uname -r ;;
 5) command apt list;;
 6) sudo nvidia-xconfig ;; 
